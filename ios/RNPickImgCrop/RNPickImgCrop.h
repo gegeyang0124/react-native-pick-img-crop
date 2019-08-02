@@ -6,7 +6,9 @@
 //  Copyright © 2019年 BZ-IMac. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <React/RCTBridge.h>
+#import <React/RCTBridgeModule.h>
+#import <React/RCTConvert.h>
 
 @interface RNPickImgCrop : NSObject
 
