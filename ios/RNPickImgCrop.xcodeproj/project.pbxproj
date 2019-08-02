@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AAEC96F22F40CDC00632EE8 /* RNPickImgCrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAEC96E22F40CDC00632EE8 /* RNPickImgCrop.h */; };
+		1AAEC97122F40CDC00632EE8 /* RNPickImgCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEC97022F40CDC00632EE8 /* RNPickImgCrop.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AAEC96B22F40CDC00632EE8 /* libRNPickImgCrop.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libRNPickImgCrop.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAEC96E22F40CDC00632EE8 /* RNPickImgCrop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPickImgCrop.h; sourceTree = "<group>"; };
+		1AAEC97022F40CDC00632EE8 /* RNPickImgCrop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPickImgCrop.m; sourceTree = "<group>"; };
+		1AAEC97822F40DEF00632EE8 /* AssetPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AssetPicker.bundle; sourceTree = "<group>"; };
+		1AAEC97B22F40DEF00632EE8 /* XG_PlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_PlayerManager.h; sourceTree = "<group>"; };
+		1AAEC97C22F40DEF00632EE8 /* XG_PlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_PlayerManager.m; sourceTree = "<group>"; };
+		1AAEC97D22F40DEF00632EE8 /* XG_MediaBrowseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_MediaBrowseView.h; sourceTree = "<group>"; };
+		1AAEC97E22F40DEF00632EE8 /* XG_MediaBrowseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_MediaBrowseView.m; sourceTree = "<group>"; };
+		1AAEC97F22F40DEF00632EE8 /* XG_MediaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_MediaCell.h; sourceTree = "<group>"; };
+		1AAEC98022F40DEF00632EE8 /* XG_MediaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_MediaCell.m; sourceTree = "<group>"; };
+		1AAEC98122F40DEF00632EE8 /* UIView+XGAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XGAdd.h"; sourceTree = "<group>"; };
+		1AAEC98222F40DEF00632EE8 /* UIView+XGAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XGAdd.m"; sourceTree = "<group>"; };
+		1AAEC98322F40DEF00632EE8 /* XG_AlbumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_AlbumCell.h; sourceTree = "<group>"; };
+		1AAEC98422F40DEF00632EE8 /* XG_AlbumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_AlbumCell.m; sourceTree = "<group>"; };
+		1AAEC98522F40DEF00632EE8 /* XG_AlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XG_AlbumCell.xib; sourceTree = "<group>"; };
+		1AAEC98622F40DEF00632EE8 /* XG_AlbumModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_AlbumModel.h; sourceTree = "<group>"; };
+		1AAEC98722F40DEF00632EE8 /* XG_AlbumModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_AlbumModel.m; sourceTree = "<group>"; };
+		1AAEC98822F40DEF00632EE8 /* XG_AssetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_AssetCell.h; sourceTree = "<group>"; };
+		1AAEC98922F40DEF00632EE8 /* XG_AssetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_AssetCell.m; sourceTree = "<group>"; };
+		1AAEC98A22F40DEF00632EE8 /* XG_AssetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XG_AssetCell.xib; sourceTree = "<group>"; };
+		1AAEC98B22F40DEF00632EE8 /* XG_AssetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_AssetModel.h; sourceTree = "<group>"; };
+		1AAEC98C22F40DEF00632EE8 /* XG_AssetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_AssetModel.m; sourceTree = "<group>"; };
+		1AAEC98D22F40DEF00632EE8 /* XG_AssetPickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_AssetPickerController.h; sourceTree = "<group>"; };
+		1AAEC98E22F40DEF00632EE8 /* XG_AssetPickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_AssetPickerController.m; sourceTree = "<group>"; };
+		1AAEC98F22F40DEF00632EE8 /* XG_AssetPickerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_AssetPickerManager.h; sourceTree = "<group>"; };
+		1AAEC99022F40DEF00632EE8 /* XG_AssetPickerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_AssetPickerManager.m; sourceTree = "<group>"; };
+		1AAEC99122F40DEF00632EE8 /* XG_BarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_BarButton.h; sourceTree = "<group>"; };
+		1AAEC99222F40DEF00632EE8 /* XG_BarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_BarButton.m; sourceTree = "<group>"; };
+		1AAEC99322F40DEF00632EE8 /* XG_PickerMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_PickerMacro.h; sourceTree = "<group>"; };
+		1AAEC99422F40DF000632EE8 /* XG_RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_RootViewController.h; sourceTree = "<group>"; };
+		1AAEC99522F40DF000632EE8 /* XG_RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_RootViewController.m; sourceTree = "<group>"; };
+		1AAEC99622F40DF000632EE8 /* XG_TitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_TitleView.h; sourceTree = "<group>"; };
+		1AAEC99722F40DF000632EE8 /* XG_TitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_TitleView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AAEC96922F40CDC00632EE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AAEC96222F40CDC00632EE8 = {
+			isa = PBXGroup;
+			children = (
+				1AAEC97722F40DEF00632EE8 /* XGAssetPickerController */,
+				1AAEC96D22F40CDC00632EE8 /* RNPickImgCrop */,
+				1AAEC96C22F40CDC00632EE8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AAEC96C22F40CDC00632EE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AAEC96B22F40CDC00632EE8 /* libRNPickImgCrop.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AAEC96D22F40CDC00632EE8 /* RNPickImgCrop */ = {
+			isa = PBXGroup;
+			children = (
+				1AAEC96E22F40CDC00632EE8 /* RNPickImgCrop.h */,
+				1AAEC97022F40CDC00632EE8 /* RNPickImgCrop.m */,
+			);
+			path = RNPickImgCrop;
+			sourceTree = "<group>";
+		};
+		1AAEC97722F40DEF00632EE8 /* XGAssetPickerController */ = {
+			isa = PBXGroup;
+			children = (
+				1AAEC97822F40DEF00632EE8 /* AssetPicker.bundle */,
+				1AAEC97922F40DEF00632EE8 /* MediaBrowseView */,
+				1AAEC98122F40DEF00632EE8 /* UIView+XGAdd.h */,
+				1AAEC98222F40DEF00632EE8 /* UIView+XGAdd.m */,
+				1AAEC98322F40DEF00632EE8 /* XG_AlbumCell.h */,
+				1AAEC98422F40DEF00632EE8 /* XG_AlbumCell.m */,
+				1AAEC98522F40DEF00632EE8 /* XG_AlbumCell.xib */,
+				1AAEC98622F40DEF00632EE8 /* XG_AlbumModel.h */,
+				1AAEC98722F40DEF00632EE8 /* XG_AlbumModel.m */,
+				1AAEC98822F40DEF00632EE8 /* XG_AssetCell.h */,
+				1AAEC98922F40DEF00632EE8 /* XG_AssetCell.m */,
+				1AAEC98A22F40DEF00632EE8 /* XG_AssetCell.xib */,
+				1AAEC98B22F40DEF00632EE8 /* XG_AssetModel.h */,
+				1AAEC98C22F40DEF00632EE8 /* XG_AssetModel.m */,
+				1AAEC98D22F40DEF00632EE8 /* XG_AssetPickerController.h */,
+				1AAEC98E22F40DEF00632EE8 /* XG_AssetPickerController.m */,
+				1AAEC98F22F40DEF00632EE8 /* XG_AssetPickerManager.h */,
+				1AAEC99022F40DEF00632EE8 /* XG_AssetPickerManager.m */,
+				1AAEC99122F40DEF00632EE8 /* XG_BarButton.h */,
+				1AAEC99222F40DEF00632EE8 /* XG_BarButton.m */,
+				1AAEC99322F40DEF00632EE8 /* XG_PickerMacro.h */,
+				1AAEC99422F40DF000632EE8 /* XG_RootViewController.h */,
+				1AAEC99522F40DF000632EE8 /* XG_RootViewController.m */,
+				1AAEC99622F40DF000632EE8 /* XG_TitleView.h */,
+				1AAEC99722F40DF000632EE8 /* XG_TitleView.m */,
+			);
+			path = XGAssetPickerController;
+			sourceTree = "<group>";
+		};
+		1AAEC97922F40DEF00632EE8 /* MediaBrowseView */ = {
+			isa = PBXGroup;
+			children = (
+				1AAEC97A22F40DEF00632EE8 /* PlayerManager */,
+				1AAEC97D22F40DEF00632EE8 /* XG_MediaBrowseView.h */,
+				1AAEC97E22F40DEF00632EE8 /* XG_MediaBrowseView.m */,
+				1AAEC97F22F40DEF00632EE8 /* XG_MediaCell.h */,
+				1AAEC98022F40DEF00632EE8 /* XG_MediaCell.m */,
+			);
+			path = MediaBrowseView;
+			sourceTree = "<group>";
+		};
+		1AAEC97A22F40DEF00632EE8 /* PlayerManager */ = {
+			isa = PBXGroup;
+			children = (
+				1AAEC97B22F40DEF00632EE8 /* XG_PlayerManager.h */,
+				1AAEC97C22F40DEF00632EE8 /* XG_PlayerManager.m */,
+			);
+			path = PlayerManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1AAEC96722F40CDC00632EE8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAEC96F22F40CDC00632EE8 /* RNPickImgCrop.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1AAEC96A22F40CDC00632EE8 /* RNPickImgCrop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AAEC97422F40CDD00632EE8 /* Build configuration list for PBXNativeTarget "RNPickImgCrop" */;
+			buildPhases = (
+				1AAEC96722F40CDC00632EE8 /* Headers */,
+				1AAEC96822F40CDC00632EE8 /* Sources */,
+				1AAEC96922F40CDC00632EE8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNPickImgCrop;
+			productName = RNPickImgCrop;
+			productReference = 1AAEC96B22F40CDC00632EE8 /* libRNPickImgCrop.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AAEC96322F40CDC00632EE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "BZ-IMac";
+				TargetAttributes = {
+					1AAEC96A22F40CDC00632EE8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 1AAEC96622F40CDC00632EE8 /* Build configuration list for PBXProject "RNPickImgCrop" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1AAEC96222F40CDC00632EE8;
+			productRefGroup = 1AAEC96C22F40CDC00632EE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AAEC96A22F40CDC00632EE8 /* RNPickImgCrop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AAEC96822F40CDC00632EE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAEC97122F40CDC00632EE8 /* RNPickImgCrop.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1AAEC97222F40CDC00632EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1AAEC97322F40CDC00632EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1AAEC97522F40CDD00632EE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1AAEC97622F40CDD00632EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AAEC96622F40CDC00632EE8 /* Build configuration list for PBXProject "RNPickImgCrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAEC97222F40CDC00632EE8 /* Debug */,
+				1AAEC97322F40CDC00632EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AAEC97422F40CDD00632EE8 /* Build configuration list for PBXNativeTarget "RNPickImgCrop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAEC97522F40CDD00632EE8 /* Debug */,
+				1AAEC97622F40CDD00632EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AAEC96322F40CDC00632EE8 /* Project object */;
+}
