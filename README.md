@@ -4,13 +4,13 @@
 ### 展示ui图
 <p>
     <img src ="./showImg/select.png" 
-          height="auto" width="100" />
+          height="auto" width="200" />
     <img src ="./showImg/filter.png"
-          height="auto" width="100"/>
+          height="auto" width="200"/>
     <img src ="./showImg/crop1.png"
-         height="auto" width="100"/>
+         height="auto" width="200"/>
     <img src ="./showImg/crop2.png"
-         height="auto" width="100"/>
+         height="auto" width="200"/>
 </p>
 
 <!--![选择图片](./showImg/select.png)
