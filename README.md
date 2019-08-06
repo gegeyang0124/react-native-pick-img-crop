@@ -23,10 +23,10 @@
   ###  安装组件：
   npm i --save react-native-pick-img-crop
   
-  ### ios安装
-  #### pod 安装
+  ### ios链接原生
+  #### pod 链接
   将 pod 'RNPickImgCrop', :path => '../node_modules/react-native-pick-img-crop' 拷贝进Podfile即可；
-  #### 传统安装
+  #### 传统链接
   react-native link react-native-pick-img-crop
   
 ### 欢迎交流
