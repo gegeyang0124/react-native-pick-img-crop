@@ -7,7 +7,6 @@
 //
 
 #import "RNPickImgCrop.h"
-#import "XG_AssetPickerController.h"
 
 @implementation RNPickImgCrop
 
@@ -31,9 +30,7 @@ RCT_EXPORT_MODULE()
  build : 122, //int,//构建值（数字），只可增大，不可重复，用于比对版本是否升级
  }
  **/
-RCT_EXPORT_METHOD(openPicker:(NSDictionary *)options
-                  resolver:(RCTPromiseResolveBlock)resolve
-                  rejecter:(RCTPromiseRejectBlock)reject){
+RCT_EXPORT_METHOD(openPicker){
     [[XG_AssetPickerManager manager] handleAuthorizationWithCompletion:^(XG_AuthorizationStatus aStatus) {
         if (aStatus == XG_AuthorizationStatusAuthorized)
         {
@@ -53,8 +50,7 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)options
             [alert show];
         }
     }];
-    
-    resolve(@{});
+
 }
 
 

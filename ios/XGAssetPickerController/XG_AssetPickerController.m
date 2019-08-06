@@ -32,6 +32,7 @@
 @property (nonatomic, strong) NSMutableArray<NSIndexPath *> *albumSelectedIndexpaths;
 @property (nonatomic, strong) NSLayoutConstraint *containerView_bottom;
 @property (nonatomic, assign) BOOL hideStatusBar;
+@property (nonatomic, strong) NSBundle *assetBundle;
 
 @end
 
@@ -92,6 +93,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Get asset bundle
+    self.assetBundle = [NSBundle bundleForClass:[self class]];
+    NSString *bundlePath = [self.assetBundle pathForResource:@"RNPickImgCrop" ofType:@"bundle"];
+    if (bundlePath) {
+        self.assetBundle = [NSBundle bundleWithPath:bundlePath];
+    }
+    
     self.view.backgroundColor = [UIColor whiteColor];
     [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(updateStatusBar) name:kShowStatusBarNotification object:nil];
@@ -402,6 +410,8 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UINib *xib = [UINib nibWithNibName:@"XG_AssetCell" bundle:self.assetBundle];
+    [collectionView registerNib:xib forCellWithReuseIdentifier:@"XG_AssetCell"];
     XG_AssetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"XG_AssetCell" forIndexPath:indexPath];
     XG_AssetModel *model = self.assetArr[indexPath.row];
     cell.model = model;
@@ -691,6 +701,15 @@
         
         self.arrowView = [UIImageView new];
         self.arrowView.image = ImageWithFile(@"picker_arrow");
+        
+//        NSBundle *bundleForClass = [NSBundle bundleForClass:[self class]];
+//        NSString *stringsBundlePath = [bundleForClass pathForResource:@"AssetPicker" ofType:@"bundle"];
+//        NSBundle *bundle;
+//        bundle = [NSBundle bundleWithPath:stringsBundlePath] ?: bundleForClass;
+//        NSString *imgPath = [bundle pathForResource:@"picker_arrow@3x" ofType:@"png"];
+//        UIImage *image = [UIImage imageWithContentsOfFile:imgPath];
+//        self.arrowView.image = image;
+        
         [self addSubview:self.arrowView];
         [self addConstraints];
         
