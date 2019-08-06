@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 
 const PickImgCroper = NativeModules.RNPickImgCrop;
+// const PickImgCroper = NativeModules.RNPickImgCropTest;
 
 /**
  * 原生底层模块名字
@@ -71,7 +72,7 @@ export default class PickImgCrop {
         }
      * **/
     static openPicker(){
-        console.info("openPickeropenPicker")
-        PickImgCroper.openPicker({});
+        // console.info("openPickeropenPicker",PickImgCroper);
+        PickImgCroper.openPicker();
     }
 }
