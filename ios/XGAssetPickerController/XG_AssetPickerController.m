@@ -487,7 +487,12 @@
     static NSString *cellIdentifier = @"CellIdentifier";
     XG_AlbumCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[[NSBundle mainBundle]loadNibNamed:@"XG_AlbumCell" owner:self options:nil] lastObject];
+//        UINib *xib = [UINib nibWithNibName:@"XG_AlbumCell" bundle:self.assetBundle];
+//        [tableView registerNib:xib forCellReuseIdentifier:@"XG_AlbumCell"];
+//        cell = [tableView dequeueReusableCellWithIdentifier:@"XG_AlbumCell" forIndexPath:indexPath];
+        
+        cell = [[self.assetBundle loadNibNamed:@"XG_AlbumCell" owner:self options:nil] lastObject];
+//        cell = [[[NSBundle mainBundle]loadNibNamed:@"XG_AlbumCell" owner:self options:nil] lastObject];
     }
     cell.model = self.albumArr[indexPath.row];
     return cell;
