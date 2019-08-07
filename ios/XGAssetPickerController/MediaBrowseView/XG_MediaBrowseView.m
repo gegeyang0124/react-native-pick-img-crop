@@ -137,7 +137,8 @@
     self.size = _toContainerView.size;
     [_toContainerView addSubview:self];
 
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_fromItemIndex-1 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
+//    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_fromItemIndex-1 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];//加入相机时使用
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_fromItemIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:NO];
     [self.collectionView layoutIfNeeded];//关键，否则下面获取的cell是nil
     
     [UIView setAnimationsEnabled:YES];
@@ -175,7 +176,8 @@
     if (self.fromItemIndex-1 == currentPage) {
         fromView = self.fromView;
     } else {
-        XG_AssetCell *assetCell = (XG_AssetCell *)[_fromCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:currentPage+1 inSection:0]];
+//         XG_AssetCell *assetCell = (XG_AssetCell *)[_fromCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:currentPage+1 inSection:0]];
+        XG_AssetCell *assetCell = (XG_AssetCell *)[_fromCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:currentPage inSection:0]];
         fromView = assetCell.imageView;
     }
     

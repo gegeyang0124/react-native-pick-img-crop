@@ -278,7 +278,16 @@
 //        [self.bottomConfirmBtn setTitle:[NSString stringWithFormat:@"上传(%d/%d)",(int)self.pickerOptions.pickedAssetModels.count,(int)self.pickerOptions.maxAssetsCount] forState:UIControlStateNormal];
 //        [self.bottomConfirmBtn.titleLabel setText:[NSString stringWithFormat:@"上传(%d/%d)",(int)self.pickerOptions.pickedAssetModels.count,(int)self.pickerOptions.maxAssetsCount]];
 //        [self.bottomConfirmBtn setTitleColor:kAppThemeColor forState:UIControlStateNormal];
-        [self setUnderlineNoneTitle:self.bottomConfirmBtn title:[NSString stringWithFormat:@"上传(%d/%d)",(int)self.pickerOptions.pickedAssetModels.count,(int)self.pickerOptions.maxAssetsCount]];
+        
+        NSString *countStr;
+        if(self.pickerOptions.maxAssetsCount < 0){
+            countStr = [NSString stringWithFormat:@"上传(%d)",(int)self.pickerOptions.pickedAssetModels.count];
+        }
+        else
+        {
+            countStr = [NSString stringWithFormat:@"上传(%d/%d)",(int)self.pickerOptions.pickedAssetModels.count,(int)self.pickerOptions.maxAssetsCount];
+        }
+        [self setUnderlineNoneTitle:self.bottomConfirmBtn title:countStr];
         UIColor *titleColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
         [self.bottomConfirmBtn.titleLabel setTextColor:titleColor];
 //        [self.bottomConfirmBtn setTitleColor:titleColor forState:UIControlStateNormal];//setAttributedTitle调用后已经无效
@@ -435,7 +444,7 @@
             weakCell.numberLabel.text = @"";
         } else {
             // 2. 选择照片,检查是否超过了最大个数的限制
-            if (self.pickerOptions.pickedAssetModels.count < self.pickerOptions.maxAssetsCount) {
+            if (self.pickerOptions.maxAssetsCount < 0 || self.pickerOptions.pickedAssetModels.count < self.pickerOptions.maxAssetsCount) {
                 weakCell.selectPhotoButton.selected = YES;
                 model.picked = YES;
                 [self.pickerOptions.pickedAssetModels addObject:model];
@@ -457,7 +466,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.item == 0) {
+//    if (indexPath.item == 0) {
+    if (indexPath.item == -1) {
         //打开相机
         if (self.pickerOptions.pickedAssetModels.count < self.pickerOptions.maxAssetsCount) {
 #if TARGET_OS_SIMULATOR
@@ -470,7 +480,7 @@
         }
     }else{
         NSMutableArray *items = [self.assetArr mutableCopy];
-        [items removeObjectAtIndex:0];
+//        [items removeObjectAtIndex:0];//加上打开相机时，移除第一个成员
         [self performSelector:@selector(updateStatusBar) withObject:nil afterDelay:0.2];
         XG_MediaBrowseView *v = [[XG_MediaBrowseView alloc] initWithItems:items];
         [v presentCellImageAtIndexPath:indexPath FromCollectionView:collectionView toContainer:self.navigationController.view animated:YES completion:nil];
@@ -519,7 +529,8 @@
 
 - (void)refreshAlbumAssetsStatus{
     [self.albumSelectedIndexpaths removeAllObjects];
-    for (int i=1; i<self.assetArr.count; i++) {//第1个为相机占位
+//    for (int i=1; i<self.assetArr.count; i++) {//第1个为相机占位
+    for (int i=0; i<self.assetArr.count; i++) {
         XG_AssetModel *am = self.assetArr[i];
         am.picked = NO;
         am.number = 0;
@@ -549,7 +560,18 @@
     }else{
         self.bottomConfirmBtn.enabled = NO;
     }
-    [self setUnderlineNoneTitle:self.bottomConfirmBtn title:[NSString stringWithFormat:@"上传(%d/%d)",(int)self.pickerOptions.pickedAssetModels.count,(int)self.pickerOptions.maxAssetsCount]];
+    NSString *countStr;
+    if(self.pickerOptions.maxAssetsCount < 0){
+        countStr = [NSString stringWithFormat:@"上传(%d)",(int)self.pickerOptions.pickedAssetModels.count];
+    }
+    else
+    {
+        countStr = [NSString stringWithFormat:@"上传(%d/%d)",(int)self.pickerOptions.pickedAssetModels.count,(int)self.pickerOptions.maxAssetsCount];
+    }
+    [self setUnderlineNoneTitle:self.bottomConfirmBtn title:countStr];
+    
+//    [self setUnderlineNoneTitle:self.bottomConfirmBtn title:[NSString stringWithFormat:@"上传(%d/%d)",(int)self.pickerOptions.pickedAssetModels.count,(int)self.pickerOptions.maxAssetsCount]];
+    
 //    NSString *str = [NSString stringWithFormat:@"上传(%d/%d)",(int)self.pickerOptions.pickedAssetModels.count,(int)self.pickerOptions.maxAssetsCount];
 //    [self.bottomConfirmBtn.titleLabel setText:str];
 //    [self.bottomConfirmBtn setTitle:[NSString stringWithFormat:@"上传(%d/%d)",(int)self.pickerOptions.pickedAssetModels.count,(int)self.pickerOptions.maxAssetsCount] forState:UIControlStateNormal];
