@@ -29,6 +29,34 @@
   #### 传统链接
   react-native link react-native-pick-img-crop
   
+  #### Android
+	### `settings.gradle`
+    ```gradle
+    include ':react-native-pick-img-crop'
+    project(':react-native-pick-img-crop').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-pick-img-crop/android')
+    ```
+	### `build.gradle`
+    ```gradle
+    dependencies {
+        compile project(':react-native-pick-img-crop')
+    }
+    ```
+
+	###`MainApplication.java`
+    ```java
+   import com.luck.picture.lib.PhotoCropPickerPackage;
+
+    public class MainApplication extends Application implements ReactApplication {
+     @Override
+       protected List<ReactPackage> getPackages() {
+         return Arrays.<ReactPackage>asList(
+             new MainReactPackage(),
+               new PhotoCropPickerPackage()
+         );
+       }
+    }
+    ```
+  
 ### 欢迎交流
 欢迎提问交流；若有bug，请添加bug截图或代码片段，以便更快更好的解决问题。<br>
 欢迎大家一起交流
