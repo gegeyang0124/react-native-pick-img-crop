@@ -1,4 +1,4 @@
-package com.luck.picture.lib;
+package com.bzyl.rndemo.photo_picker;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -34,20 +34,21 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
             if (resultCode == RESULT_OK && requestCode == PictureConfig.CHOOSE_REQUEST) {
 //                // 图片、视频、音频选择结果回调
                 List<LocalMedia> selectList = PictureSelector.obtainMultipleResult(data);
-                Log.e("yan",selectList.size()+"");
 //                // 例如 LocalMedia 里面返回三种path
 //                // 1.media.getPath(); 为原图path
 //                // 2.media.getCutPath();为裁剪后path，需判断media.isCut();是否为true  注意：音视频除外
 //                // 3.media.getCompressPath();为压缩后path，需判断media.isCompressed();是否为true  注意：音视频除外
 //                // 如果裁剪并压缩了，以取压缩路径为准，因为是先裁剪后压缩的
                 if (mSingle) {
+                    WritableMap image= new WritableNativeMap();
                     if (selectList.get(0).isCut()) {
-                        mCallback.invoke("file:///" + selectList.get(0).getCutPath());
+                        image.putString("path","file://" + selectList.get(0).getCutPath());
                     } else if (selectList.get(0).isCompressed()) {
-                        mCallback.invoke("file:///" + selectList.get(0).getCompressPath());
+                        image.putString("path","file://" + selectList.get(0).getCompressPath());
                     } else {
-                        mCallback.invoke("file:///" + selectList.get(0).getPath());
+                        image.putString("path","file://" + selectList.get(0).getPath());
                     }
+                    mCallback.invoke(image);
                 } else {
                     WritableArray writableArray=new WritableNativeArray();
                     WritableMap image;
