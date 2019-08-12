@@ -259,7 +259,8 @@
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
     NSArray <NSIndexPath *> *indexPaths = [_fromCollectionView indexPathsForVisibleItems];
-    NSIndexPath *indexP = [NSIndexPath indexPathForItem:indexPath.item + 1 inSection:0];
+//    NSIndexPath *indexP = [NSIndexPath indexPathForItem:indexPath.item + 1 inSection:0];//第一个是相机时使用
+    NSIndexPath *indexP = [NSIndexPath indexPathForItem:indexPath.item inSection:0];
     if (![indexPaths containsObject:indexP]) {
         [_fromCollectionView scrollToItemAtIndexPath:indexP atScrollPosition:UICollectionViewScrollPositionBottom animated:NO];
     }
