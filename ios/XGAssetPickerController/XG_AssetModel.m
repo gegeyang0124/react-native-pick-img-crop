@@ -35,6 +35,18 @@
         default:
             break;
     }
+    
+    [asset requestContentEditingInputWithOptions:nil completionHandler:^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info) {
+        //                    NSLog(@"URL:%@",  contentEditingInput.fullSizeImageURL.absoluteString);
+        model.path = [contentEditingInput.fullSizeImageURL.absoluteString substringFromIndex:7];//screw all the crap of file://
+        //                    NSFileManager *fileManager = [NSFileManager defaultManager];
+        //                    BOOL isExist = [fileManager fileExistsAtPath:path];
+        //                    if (isExist)
+        //                        NSLog(@"oh yeah");
+        //                    else {
+        //                        NSLog(@"damn");
+        //                    }
+    }];
 
     return model;
 }

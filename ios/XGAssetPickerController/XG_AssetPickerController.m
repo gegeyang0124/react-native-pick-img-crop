@@ -373,6 +373,10 @@
 
 - (void)onConfirmBtnClick {
     [self dismissViewControllerAnimated:YES completion:^{
+        if (self.didSelectPhotoBlock) {
+            self.didSelectPhotoBlock([self.pickerOptions.pickedAssetModels copy]);
+        }
+        
         if (self.delegate && [self.delegate respondsToSelector:@selector(assetPickerController:didFinishPickingAssets:)]) {
             [self.delegate assetPickerController:self didFinishPickingAssets:[self.pickerOptions.pickedAssetModels copy]];
         }

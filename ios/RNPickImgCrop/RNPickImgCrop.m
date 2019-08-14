@@ -51,6 +51,18 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)params
             //    [array removeLastObject];//去除占位model
             //    options.pickedAssetModels = array;
             XG_AssetPickerController *photoPickerVc = [[XG_AssetPickerController alloc] initWithOptions:options delegate:self];
+            photoPickerVc.didSelectPhotoBlock = ^(NSMutableArray<XG_AssetModel *> * assets){
+                NSMutableArray *selections = [[NSMutableArray alloc] init];
+                
+                for (XG_AssetModel *model in assets) {
+                    [selections addObject:@{
+                                            @"path":model.path
+                                            }];
+                }
+                
+                resolve(selections);
+            };
+            
             UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:photoPickerVc];
             [[self getRootVC] presentViewController:nav animated:YES completion:nil];
         }
@@ -60,9 +72,82 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)params
             [alert show];
         }
     }];
-
-    resolve(@{});
 }
 
+/**
+ 选中单个图片
+ **/
+//- (void) processSingleImagePick:(UIImage*)image withExif:(NSDictionary*) exif withViewController:(UIViewController*)viewController withSourceURL:(NSString*)sourceURL withLocalIdentifier:(NSString*)localIdentifier withFilename:(NSString*)filename withCreationDate:(NSDate*)creationDate withModificationDate:(NSDate*)modificationDate {
+//
+//    if (image == nil) {
+//        [viewController dismissViewControllerAnimated:YES completion:[self waitAnimationEnd:^{
+//            self.reject(ERROR_PICKER_NO_DATA_KEY, ERROR_PICKER_NO_DATA_MSG, nil);
+//        }]];
+//        return;
+//    }
+//
+//    NSLog(@"id: %@ filename: %@", localIdentifier, filename);
+//
+//    if ([[[self options] objectForKey:@"cropping"] boolValue]) {
+//        self.croppingFile = [[NSMutableDictionary alloc] init];
+//        self.croppingFile[@"sourceURL"] = sourceURL;
+//        self.croppingFile[@"localIdentifier"] = localIdentifier;
+//        self.croppingFile[@"filename"] = filename;
+//        self.croppingFile[@"creationDate"] = creationDate;
+//        self.croppingFile[@"modifcationDate"] = modificationDate;
+//        NSLog(@"CroppingFile %@", self.croppingFile);
+//
+//        [self startCropping:[image fixOrientation]];
+//    } else {
+//        ImageResult *imageResult = [self.compression compressImage:[image fixOrientation]  withOptions:self.options];
+//        NSString *filePath = [self persistFile:imageResult.data];
+//        if (filePath == nil) {
+//            [viewController dismissViewControllerAnimated:YES completion:[self waitAnimationEnd:^{
+//                self.reject(ERROR_CANNOT_SAVE_IMAGE_KEY, ERROR_CANNOT_SAVE_IMAGE_MSG, nil);
+//            }]];
+//            return;
+//        }
+//
+//        // Wait for viewController to dismiss before resolving, or we lose the ability to display
+//        // Alert.alert in the .then() handler.
+//        [viewController dismissViewControllerAnimated:YES completion:[self waitAnimationEnd:^{
+//            self.resolve([self createAttachmentResponse:filePath
+//                                               withExif:exif
+//                                          withSourceURL:sourceURL
+//                                    withLocalIdentifier:localIdentifier
+//                                           withFilename:filename
+//                                              withWidth:imageResult.width
+//                                             withHeight:imageResult.height
+//                                               withMime:imageResult.mime
+//                                               withSize:[NSNumber numberWithUnsignedInteger:imageResult.data.length]
+//                                               withData:[[self.options objectForKey:@"includeBase64"] boolValue] ? [imageResult.data base64EncodedStringWithOptions:0] : nil
+//                                               withRect:CGRectNull
+//                                       withCreationDate:creationDate
+//                                   withModificationDate:modificationDate
+//                          ]);
+//        }]];
+//    }
+//}
+
+/**
+ 创建返回响应数据
+ **/
+//- (NSDictionary*) createAttachmentResponse:(NSString*)filePath withExif:(NSDictionary*) exif withSourceURL:(NSString*)sourceURL withLocalIdentifier:(NSString*)localIdentifier withFilename:(NSString*)filename withWidth:(NSNumber*)width withHeight:(NSNumber*)height withMime:(NSString*)mime withSize:(NSNumber*)size withData:(NSString*)data withRect:(CGRect)cropRect withCreationDate:(NSDate*)creationDate withModificationDate:(NSDate*)modificationDate {
+//    return @{
+//             @"path": (filePath && ![filePath isEqualToString:(@"")]) ? filePath : [NSNull null],
+//             @"sourceURL": (sourceURL) ? sourceURL : [NSNull null],
+//             @"localIdentifier": (localIdentifier) ? localIdentifier : [NSNull null],
+//             @"filename": (filename) ? filename : [NSNull null],
+//             @"width": width,
+//             @"height": height,
+//             @"mime": mime,
+//             @"size": size,
+//             @"data": (data) ? data : [NSNull null],
+//             @"exif": (exif) ? exif : [NSNull null],
+//             @"cropRect": CGRectIsNull(cropRect) ? [NSNull null] : [ImageCropPicker cgRectToDictionary:cropRect],
+//             @"creationDate": (creationDate) ? [NSString stringWithFormat:@"%.0f", [creationDate timeIntervalSince1970]] : [NSNull null],
+//             @"modificationDate": (modificationDate) ? [NSString stringWithFormat:@"%.0f", [modificationDate timeIntervalSince1970]] : [NSNull null],
+//             };
+//}
 
 @end

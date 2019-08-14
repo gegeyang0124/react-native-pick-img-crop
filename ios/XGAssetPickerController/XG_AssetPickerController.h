@@ -33,6 +33,7 @@
 
 @property (nonatomic, weak) id<XG_AssetPickerControllerDelegate> delegate;
 @property (nonatomic, strong) XG_AssetPickerOptions *pickerOptions;
+@property (nonatomic, copy) void (^didSelectPhotoBlock)(NSMutableArray<XG_AssetModel *> *);//选择完成点击上传的回调函数
 
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;

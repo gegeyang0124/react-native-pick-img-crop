@@ -16,6 +16,7 @@
 @property (nonatomic, assign) int number;                // 数字
 @property (nonatomic, assign) BOOL isPlaceholder;        // 是否为占位
 @property (nonatomic, assign) BOOL selectable;           // 是否可以被选中
+@property (nonatomic, strong) NSString* path;   //图片路径
 
 + (instancetype)modelWithAsset:(PHAsset *)asset videoPickable:(BOOL)videoPickable;
 
