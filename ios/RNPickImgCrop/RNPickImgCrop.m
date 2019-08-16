@@ -56,7 +56,13 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)params
                 
                 for (XG_AssetModel *model in assets) {
                     [selections addObject:@{
-                                            @"path":model.path
+                                            @"path":model.path,
+                                            @"mine":model.mine,
+                                            @"filename":model.imgName,
+                                            @"size":[NSNumber numberWithUnsignedInteger:model.imgSize],
+                                            @"width":[NSNumber numberWithUnsignedInteger:model.asset.pixelWidth],
+                                            @"height":[NSNumber numberWithUnsignedInteger:model.asset.pixelHeight],
+                                            @"creationDate":(model.asset.creationDate) ? [NSString stringWithFormat:@"%.0f", [model.asset.creationDate timeIntervalSince1970]] : [NSNull null]
                                             }];
                 }
                 

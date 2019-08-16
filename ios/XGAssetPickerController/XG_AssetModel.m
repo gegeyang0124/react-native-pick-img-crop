@@ -18,11 +18,14 @@
     switch (asset.mediaType) {
         case PHAssetMediaTypeUnknown:
             model.selectable = NO;
+            model.mine = @"file/unknown";
             break;
         case PHAssetMediaTypeImage:
             model.selectable = YES;
+            model.mine = @"image/jpeg";
             break;
         case PHAssetMediaTypeVideo:
+            model.mine = @"video/mp4";
             if (videoPickable) {
                 model.selectable = YES;
             }else{
@@ -31,10 +34,23 @@
             break;
         case PHAssetMediaTypeAudio:
             model.selectable = NO;
+            model.mine = @"audio/mp3";
             break;
         default:
             break;
     }
+    
+    PHImageManager * imageManager = [PHImageManager defaultManager];
+    [imageManager requestImageDataForAsset:asset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+        
+        NSURL *url = [info valueForKey:@"PHImageFileURLKey"];
+        NSString *str = [url absoluteString];   //url>string
+        NSArray *arr = [str componentsSeparatedByString:@"/"];
+        model.imgName = [arr lastObject];  // 图片名字
+        model.imgSize = imageData.length;   // 图片大小，单位B
+//        UIImage * image = [UIImage imageWithData:imageData];
+        
+    }];
     
     [asset requestContentEditingInputWithOptions:nil completionHandler:^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info) {
         //                    NSLog(@"URL:%@",  contentEditingInput.fullSizeImageURL.absoluteString);
