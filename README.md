@@ -1,4 +1,7 @@
 # react-native-pick-img-crop
+目前此库正在开发中....<BR/>
+ios目前只能选取照片，不能裁剪；<BR/>
+android还没有调试好，还无法使用，有兴趣的童靴可以先自己修改，代码可用<BR/>
 高新能实用的相册图片选择器，可以多张图片选择和裁剪，也可以单张图片选择
 
 ### 展示ui图
@@ -23,11 +26,12 @@
   ###  安装组件：
   npm i --save react-native-pick-img-crop
   
+  #### 传统链接
+    react-native link react-native-pick-img-crop
+  
   ### ios链接原生
   #### pod 链接
   将 pod 'RNPickImgCrop', :path => '../node_modules/react-native-pick-img-crop' 拷贝进Podfile即可；
-  #### 传统链接
-  react-native link react-native-pick-img-crop
   
   #### Android
 	### `settings.gradle`
