@@ -39,6 +39,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)cropImage;
 
 /**
+ Asynchronously crops the original image in accordance with the current settings and tells the delegate that the original image will be / has been cropped.
+ */
+- (void)cropImage:(CGRect)cropRect imageRect:(CGRect)imageRect rotationAngle:(CGFloat)rotationAngle zoomScale:(CGFloat)zoomScale applyMaskToCroppedImage:(BOOL)applyMaskToCroppedImage didBlock:(void (^)(UIImage *croppedImage))didBlock;
+
+/**
+ Asynchronously crops the original image in accordance with the current settings and tells the delegate that the original image will be / has been cropped.
+ */
+- (void)cropImage:(UIImage *)originalImage cropMode:(RSKImageCropMode)cropMode cropRect:(CGRect)cropRect imageRect:(CGRect)imageRect rotationAngle:(CGFloat)rotationAngle zoomScale:(CGFloat)zoomScale maskPath:(UIBezierPath *)maskPath applyMaskToCroppedImage:(BOOL)applyMaskToCroppedImage didBlock:(void (^)(UIImage *croppedImage))didBlock;
+
+
+/**
  Tells the delegate that the crop has been canceled.
  */
 - (void)cancelCrop;

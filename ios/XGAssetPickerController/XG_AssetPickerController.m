@@ -451,6 +451,7 @@
             if (self.pickerOptions.maxAssetsCount < 0 || self.pickerOptions.pickedAssetModels.count < self.pickerOptions.maxAssetsCount) {
                 weakCell.selectPhotoButton.selected = YES;
                 model.picked = YES;
+                model.img = weakCell.imageView.image;
                 [self.pickerOptions.pickedAssetModels addObject:model];
                 weakCell.numberLabel.text = [NSString stringWithFormat:@"%d",(int)self.pickerOptions.pickedAssetModels.count];
             } else {

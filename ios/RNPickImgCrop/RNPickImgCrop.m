@@ -64,6 +64,17 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)params
                                             @"height":[NSNumber numberWithUnsignedInteger:model.asset.pixelHeight],
                                             @"creationDate":(model.asset.creationDate) ? [NSString stringWithFormat:@"%.0f", [model.asset.creationDate timeIntervalSince1970]] : [NSNull null]
                                             }];
+                    
+                    RSKImageCropViewController *cropCtrl = [[RSKImageCropViewController alloc] initWithImage:model.img cropMode:RSKImageCropModeSquare];
+                    
+                    CGRect cropRect = CGRectMake(0.0, 0.0, model.asset.pixelWidth, model.asset.pixelWidth * 3 / 4);
+                    CGRect imageRect = CGRectMake(0.0, 0.0, model.asset.pixelWidth, model.asset.pixelWidth * 3 / 4);
+                    CGFloat rotationAngle = atan2(0, 0);
+                    CGFloat zoomScale = 1.0;
+                    
+                    [cropCtrl cropImage:cropRect imageRect:imageRect rotationAngle:rotationAngle zoomScale:zoomScale applyMaskToCroppedImage:false didBlock:^(UIImage *croppedImage){
+                        UIImage *img2 = croppedImage;
+                    }];
                 }
                 
                 resolve(selections);

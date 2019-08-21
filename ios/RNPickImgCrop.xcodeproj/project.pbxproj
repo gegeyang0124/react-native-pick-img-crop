@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1AAEC96F22F40CDC00632EE8 /* RNPickImgCrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAEC96E22F40CDC00632EE8 /* RNPickImgCrop.h */; };
 		1AAEC97122F40CDC00632EE8 /* RNPickImgCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEC97022F40CDC00632EE8 /* RNPickImgCrop.m */; };
+		1AFE0019230C1B1A00F795E0 /* ZYCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE0017230C1B1A00F795E0 /* ZYCompression.m */; };
+		1AFE001A230C1B1A00F795E0 /* ZYCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFE0018230C1B1A00F795E0 /* ZYCompression.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		1AAEC99522F40DF000632EE8 /* XG_RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_RootViewController.m; sourceTree = "<group>"; };
 		1AAEC99622F40DF000632EE8 /* XG_TitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_TitleView.h; sourceTree = "<group>"; };
 		1AAEC99722F40DF000632EE8 /* XG_TitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_TitleView.m; sourceTree = "<group>"; };
+		1AFE0017230C1B1A00F795E0 /* ZYCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYCompression.m; sourceTree = "<group>"; };
+		1AFE0018230C1B1A00F795E0 /* ZYCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYCompression.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		1A369D8B230BA4B2003F120E /* ZYImageCropper */ = {
 			isa = PBXGroup;
 			children = (
+				1AFE0018230C1B1A00F795E0 /* ZYCompression.h */,
+				1AFE0017230C1B1A00F795E0 /* ZYCompression.m */,
 				1A369D8C230BA4B2003F120E /* CGGeometry+ZYImageCropper.h */,
 				1A369D8D230BA4B2003F120E /* CGGeometry+ZYImageCropper.m */,
 				1A369D8E230BA4B2003F120E /* UIApplication+ZYImageCropper.h */,
@@ -188,6 +194,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFE001A230C1B1A00F795E0 /* ZYCompression.h in Headers */,
 				1AAEC96F22F40CDC00632EE8 /* RNPickImgCrop.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAEC97122F40CDC00632EE8 /* RNPickImgCrop.m in Sources */,
+				1AFE0019230C1B1A00F795E0 /* ZYCompression.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

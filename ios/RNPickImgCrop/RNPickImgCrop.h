@@ -10,6 +10,7 @@
 #import <React/RCTBridgeModule.h>
 #import <React/RCTConvert.h>
 #import "XG_AssetPickerController.h"
+#import "ZYImageCropper.h"
 
 @interface RNPickImgCrop : NSObject<RCTBridgeModule>
 

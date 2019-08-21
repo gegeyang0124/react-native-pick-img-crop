@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSString* mine;   //文件类型
 @property (nonatomic, strong) NSString *imgName;   //文件名字
 @property (nonatomic, assign) NSInteger imgSize;   //文件内容大小 单位B
+@property (nonatomic, assign) UIImage *img;   //图片
 
 + (instancetype)modelWithAsset:(PHAsset *)asset videoPickable:(BOOL)videoPickable;
 

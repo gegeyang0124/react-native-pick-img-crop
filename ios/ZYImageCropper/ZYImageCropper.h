@@ -36,11 +36,12 @@ FOUNDATION_EXPORT double RSKImageCropperVersionNumber;
 //! Project version string for RSKImageCropper.
 FOUNDATION_EXPORT const unsigned char RSKImageCropperVersionString[];
 
-#import <ZYImageCropper/CGGeometry+ZYImageCropper.h>
-#import <ZYImageCropper/ZYImageCropViewController.h>
-#import <ZYImageCropper/ZYImageCropViewController+Protected.h>
-#import <ZYImageCropper/ZYImageScrollView.h>
-#import <ZYImageCropper/ZYInternalUtility.h>
-#import <ZYImageCropper/ZYTouchView.h>
-#import <ZYImageCropper/UIApplication+ZYImageCropper.h>
-#import <ZYImageCropper/UIImage+ZYImageCropper.h>
+#import "CGGeometry+ZYImageCropper.h"
+#import "ZYImageCropViewController.h"
+#import "ZYImageCropViewController+Protected.h"
+#import "ZYImageScrollView.h"
+#import "ZYInternalUtility.h"
+#import "ZYTouchView.h"
+#import "UIApplication+ZYImageCropper.h"
+#import "UIImage+ZYImageCropper.h"
+#import "ZYCompression.h"

@@ -1,4 +1,4 @@
-framework module RSKImageCropper {
+framework module ZYImageCropper {
     umbrella header "ZYImageCropper.h"
 
     export *
