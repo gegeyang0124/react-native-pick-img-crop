@@ -83,24 +83,24 @@ export default class PickImgCrop {
             cropHeight:200,//number 可不传,//裁剪高度 cropping为true并且cropWidth和cropHeight同时为正整数时有效，不传或为小于0时，以最短边为准进行居中裁剪
         },options);
         console.info("openPickeropenPicker",options);
-        let d = [
-            {
-                cropRect:
-                    {
-                        height: 750,//裁剪高度
-                        width: 750,//裁剪宽度
-                        x: 0,//裁剪X坐标
-                        y: 188//裁剪Y坐标
-                    },
-                height: 2000,//原图片高
-                mime: "image/jpeg",//图片类型
-                modificationDate: "1564452233000",//裁剪时间
-                createTime:"1564452233000",//原图片创建时间
-                path: "file:///storage/emulated/0/Pictures/d8c74bd1-a39e-4cf8-bf6d-c05115e4928f.jpg",//图片路径
-                size: 1216097,//图片大小
-                width: 2000//原图片宽
-            }
-        ];
+        // let d = [
+        //     {
+        //         cropRect:
+        //             {
+        //                 height: 750,//裁剪高度
+        //                 width: 750,//裁剪宽度
+        //                 x: 0,//裁剪X坐标
+        //                 y: 188//裁剪Y坐标
+        //             },
+        //         height: 2000,//原图片高
+        //         mime: "image/jpeg",//图片类型
+        //         modificationDate: "1564452233000",//裁剪时间
+        //         createTime:"1564452233000",//原图片创建时间
+        //         path: "file:///storage/emulated/0/Pictures/d8c74bd1-a39e-4cf8-bf6d-c05115e4928f.jpg",//图片路径
+        //         size: 1216097,//图片大小
+        //         width: 2000//原图片宽
+        //     }
+        // ];
         return PickImgCroper.openPicker(options);
     }
 }
