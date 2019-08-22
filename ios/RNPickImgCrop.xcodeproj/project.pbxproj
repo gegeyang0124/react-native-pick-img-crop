@@ -9,29 +9,9 @@
 /* Begin PBXBuildFile section */
 		1AAEC96F22F40CDC00632EE8 /* RNPickImgCrop.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAEC96E22F40CDC00632EE8 /* RNPickImgCrop.h */; };
 		1AAEC97122F40CDC00632EE8 /* RNPickImgCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEC97022F40CDC00632EE8 /* RNPickImgCrop.m */; };
-		1AFE0019230C1B1A00F795E0 /* ZYCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFE0017230C1B1A00F795E0 /* ZYCompression.m */; };
-		1AFE001A230C1B1A00F795E0 /* ZYCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFE0018230C1B1A00F795E0 /* ZYCompression.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A369D8C230BA4B2003F120E /* CGGeometry+ZYImageCropper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+ZYImageCropper.h"; sourceTree = "<group>"; };
-		1A369D8D230BA4B2003F120E /* CGGeometry+ZYImageCropper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+ZYImageCropper.m"; sourceTree = "<group>"; };
-		1A369D8E230BA4B2003F120E /* UIApplication+ZYImageCropper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ZYImageCropper.h"; sourceTree = "<group>"; };
-		1A369D8F230BA4B2003F120E /* UIApplication+ZYImageCropper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ZYImageCropper.m"; sourceTree = "<group>"; };
-		1A369D90230BA4B2003F120E /* UIImage+ZYImageCropper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZYImageCropper.h"; sourceTree = "<group>"; };
-		1A369D91230BA4B2003F120E /* UIImage+ZYImageCropper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZYImageCropper.m"; sourceTree = "<group>"; };
-		1A369D92230BA4B2003F120E /* ZYImageCropper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYImageCropper.h; sourceTree = "<group>"; };
-		1A369D93230BA4B2003F120E /* ZYImageCropper.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = ZYImageCropper.modulemap; sourceTree = "<group>"; };
-		1A369D94230BA4B2003F120E /* ZYImageCropperStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYImageCropperStrings.bundle; sourceTree = "<group>"; };
-		1A369D95230BA4B2003F120E /* ZYImageCropViewController+Protected.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZYImageCropViewController+Protected.h"; sourceTree = "<group>"; };
-		1A369D96230BA4B2003F120E /* ZYImageCropViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYImageCropViewController.h; sourceTree = "<group>"; };
-		1A369D97230BA4B2003F120E /* ZYImageCropViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYImageCropViewController.m; sourceTree = "<group>"; };
-		1A369D98230BA4B2003F120E /* ZYImageScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYImageScrollView.h; sourceTree = "<group>"; };
-		1A369D99230BA4B2003F120E /* ZYImageScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYImageScrollView.m; sourceTree = "<group>"; };
-		1A369D9A230BA4B2003F120E /* ZYInternalUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYInternalUtility.h; sourceTree = "<group>"; };
-		1A369D9B230BA4B2003F120E /* ZYInternalUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYInternalUtility.m; sourceTree = "<group>"; };
-		1A369D9C230BA4B2003F120E /* ZYTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTouchView.h; sourceTree = "<group>"; };
-		1A369D9D230BA4B2003F120E /* ZYTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTouchView.m; sourceTree = "<group>"; };
 		1AAEC96B22F40CDC00632EE8 /* libRNPickImgCrop.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libRNPickImgCrop.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AAEC96E22F40CDC00632EE8 /* RNPickImgCrop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPickImgCrop.h; sourceTree = "<group>"; };
 		1AAEC97022F40CDC00632EE8 /* RNPickImgCrop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPickImgCrop.m; sourceTree = "<group>"; };
@@ -65,8 +45,6 @@
 		1AAEC99522F40DF000632EE8 /* XG_RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_RootViewController.m; sourceTree = "<group>"; };
 		1AAEC99622F40DF000632EE8 /* XG_TitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XG_TitleView.h; sourceTree = "<group>"; };
 		1AAEC99722F40DF000632EE8 /* XG_TitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XG_TitleView.m; sourceTree = "<group>"; };
-		1AFE0017230C1B1A00F795E0 /* ZYCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYCompression.m; sourceTree = "<group>"; };
-		1AFE0018230C1B1A00F795E0 /* ZYCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYCompression.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,37 +58,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A369D8B230BA4B2003F120E /* ZYImageCropper */ = {
-			isa = PBXGroup;
-			children = (
-				1AFE0018230C1B1A00F795E0 /* ZYCompression.h */,
-				1AFE0017230C1B1A00F795E0 /* ZYCompression.m */,
-				1A369D8C230BA4B2003F120E /* CGGeometry+ZYImageCropper.h */,
-				1A369D8D230BA4B2003F120E /* CGGeometry+ZYImageCropper.m */,
-				1A369D8E230BA4B2003F120E /* UIApplication+ZYImageCropper.h */,
-				1A369D8F230BA4B2003F120E /* UIApplication+ZYImageCropper.m */,
-				1A369D90230BA4B2003F120E /* UIImage+ZYImageCropper.h */,
-				1A369D91230BA4B2003F120E /* UIImage+ZYImageCropper.m */,
-				1A369D92230BA4B2003F120E /* ZYImageCropper.h */,
-				1A369D93230BA4B2003F120E /* ZYImageCropper.modulemap */,
-				1A369D94230BA4B2003F120E /* ZYImageCropperStrings.bundle */,
-				1A369D95230BA4B2003F120E /* ZYImageCropViewController+Protected.h */,
-				1A369D96230BA4B2003F120E /* ZYImageCropViewController.h */,
-				1A369D97230BA4B2003F120E /* ZYImageCropViewController.m */,
-				1A369D98230BA4B2003F120E /* ZYImageScrollView.h */,
-				1A369D99230BA4B2003F120E /* ZYImageScrollView.m */,
-				1A369D9A230BA4B2003F120E /* ZYInternalUtility.h */,
-				1A369D9B230BA4B2003F120E /* ZYInternalUtility.m */,
-				1A369D9C230BA4B2003F120E /* ZYTouchView.h */,
-				1A369D9D230BA4B2003F120E /* ZYTouchView.m */,
-			);
-			path = ZYImageCropper;
-			sourceTree = "<group>";
-		};
 		1AAEC96222F40CDC00632EE8 = {
 			isa = PBXGroup;
 			children = (
-				1A369D8B230BA4B2003F120E /* ZYImageCropper */,
 				1AAEC97722F40DEF00632EE8 /* XGAssetPickerController */,
 				1AAEC96D22F40CDC00632EE8 /* RNPickImgCrop */,
 				1AAEC96C22F40CDC00632EE8 /* Products */,
@@ -194,7 +144,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AFE001A230C1B1A00F795E0 /* ZYCompression.h in Headers */,
 				1AAEC96F22F40CDC00632EE8 /* RNPickImgCrop.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAEC97122F40CDC00632EE8 /* RNPickImgCrop.m in Sources */,
-				1AFE0019230C1B1A00F795E0 /* ZYCompression.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

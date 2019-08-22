@@ -122,7 +122,8 @@
     CGFloat pixelWidth = photoWidth * multiple;
     CGFloat pixelHeight = pixelWidth / aspectRatio;
 
-    [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(pixelWidth, pixelHeight) contentMode:PHImageContentModeAspectFit options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+    //contentMode:获取图片的模式（图片的大小与纵横比的关系），PHImageManagerMaximumSize（清晰）PHImageRequestOptionsDeliveryModeHighQualityFormat（高清）
+     [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(pixelWidth, pixelHeight) contentMode:PHImageContentModeAspectFit options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
         BOOL downloadFinined = (![[info objectForKey:PHImageCancelledKey] boolValue] && ![info objectForKey:PHImageErrorKey] && ![[info objectForKey:PHImageResultIsDegradedKey] boolValue]);
         if (downloadFinined) {
             if (completion) completion(result,info);

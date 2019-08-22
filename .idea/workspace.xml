@@ -1,167 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62c5f98e-7261-40d4-bf68-6e4ffc6f6a31" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/react-native-pick-img-crop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/react-native-pick-img-crop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RNPickImgCrop.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/RNPickImgCrop.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PhotoCropPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PhotoCropPicker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PhotoCropPickerPackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PhotoCropPickerPackage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PickerResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PickerResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureBaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureBaseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureExternalPreviewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureExternalPreviewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureFileProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureFileProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PicturePlayAudioActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PicturePlayAudioActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PicturePreviewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PicturePreviewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureSelectionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureSelectionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureSelectorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureSelectorActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureVideoPlayActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/PictureVideoPlayActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/adapter/PictureAlbumDirectoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/adapter/PictureAlbumDirectoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/adapter/PictureImageGridAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/adapter/PictureImageGridAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/adapter/SimpleFragmentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/adapter/SimpleFragmentAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/anim/OptAnimationLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/anim/OptAnimationLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/CompressionPredicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/CompressionPredicate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/InputStreamAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/InputStreamAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/InputStreamProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/InputStreamProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/Luban.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/Luban.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/OnCompressListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/OnCompressListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/OnRenameListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/compress/OnRenameListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/config/PictureConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/config/PictureConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/config/PictureMimeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/config/PictureMimeType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/config/PictureSelectionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/config/PictureSelectionConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/decoration/GridSpacingItemDecoration.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/decoration/GridSpacingItemDecoration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/decoration/RecycleViewDivider.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/decoration/RecycleViewDivider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/dialog/CustomDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/dialog/CustomDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/dialog/PictureDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/dialog/PictureDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/dialog/PictureIndeterminate.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/dialog/PictureIndeterminate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/dialog/PictureSpinView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/dialog/PictureSpinView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/entity/EventEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/entity/EventEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/entity/LocalMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/entity/LocalMedia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/entity/LocalMediaFolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/entity/LocalMediaFolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/immersive/ImmersiveManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/immersive/ImmersiveManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/immersive/LightStatusBarUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/immersive/LightStatusBarUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/immersive/RomUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/immersive/RomUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/model/LocalMediaLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/model/LocalMediaLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/observable/ImagesObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/observable/ImagesObservable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/observable/ObserverListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/observable/ObserverListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/observable/SubjectListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/observable/SubjectListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/permissions/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/permissions/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/permissions/RxPermissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/permissions/RxPermissions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/permissions/RxPermissionsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/permissions/RxPermissionsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/Compat.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/Compat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/CustomGestureDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/CustomGestureDetector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnGestureListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnGestureListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnMatrixChangedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnMatrixChangedListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnOutsidePhotoTapListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnOutsidePhotoTapListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnPhotoTapListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnPhotoTapListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnScaleChangedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnScaleChangedListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnSingleFlingListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnSingleFlingListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnViewDragListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnViewDragListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnViewTapListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/OnViewTapListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/PhotoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/PhotoView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/PhotoViewAttacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/PhotoViewAttacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/photoview/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/BusData.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/BusData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/RxBus.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/RxBus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/RxUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/RxUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/Subscribe.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/Subscribe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/SubscriberMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/SubscriberMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/ThreadMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/rxbus2/ThreadMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/AttrsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/AttrsUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/DateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/DoubleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/DoubleUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/PhotoTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/PhotoTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/PictureFileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/PictureFileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/ScreenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/ScreenUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/SdkVersionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/SdkVersionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/StatusBarUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/StatusBarUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/ToastManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/ToastManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/VoiceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/tools/VoiceUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/FolderPopWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/FolderPopWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/PhotoPopupWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/PhotoPopupWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/PreviewViewPager.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/PreviewViewPager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/SquareRelativeLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/SquareRelativeLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/CompatDecoderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/CompatDecoderFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/DecoderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/DecoderFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/ImageDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/ImageDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/ImageRegionDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/ImageRegionDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/ImageSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/ImageSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/ImageViewState.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/ImageViewState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/SkiaImageDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/SkiaImageDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/SkiaImageRegionDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/SkiaImageRegionDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/SubsamplingScaleImageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/luck/picture/lib/widget/longimage/SubsamplingScaleImageView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/a3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/a3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/a5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/a5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/down_out.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/down_out.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/fade_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/fade_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/fade_out.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/fade_out.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/modal_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/modal_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/modal_out.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/modal_out.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/photo_album_dismiss.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/photo_album_dismiss.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/photo_album_show.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/photo_album_show.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/photo_anticipate_interpolator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/photo_anticipate_interpolator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/photo_overshoot_interpolator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/photo_overshoot_interpolator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/anim/up_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/anim/up_in.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/color/picture_list_text_color.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/color/picture_list_text_color.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/color/picture_preview_text_color.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/color/picture_preview_text_color.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/audio_placeholder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/audio_placeholder.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/btn_left_bottom_selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/btn_left_bottom_selector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/btn_left_false.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/btn_left_false.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/btn_left_true.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/btn_left_true.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/btn_right_bottom_selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/btn_right_bottom_selector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/btn_right_false.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/btn_right_false.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/btn_right_true.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/btn_right_true.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/dialog_custom_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/dialog_custom_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/dialog_shadow.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/dialog_shadow.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/gif_tag.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/gif_tag.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/image_placeholder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/image_placeholder.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/item_select_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/item_select_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/num_oval.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/num_oval.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/orange_oval.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/orange_oval.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/p_seekbar_thumb_normal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/p_seekbar_thumb_normal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/p_seekbar_thumb_pressed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/p_seekbar_thumb_pressed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/picture_btn_music_shape.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/picture_btn_music_shape.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/picture_checkbox_selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/picture_checkbox_selector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/picture_layer_progress.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/picture_layer_progress.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/drawable/picture_sb_thumb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/drawable/picture_sb_thumb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/activity_picture_play_audio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/activity_picture_play_audio.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_activity_external_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_activity_external_preview.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_activity_video_play.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_activity_video_play.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_album_folder_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_album_folder_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_alert_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_alert_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_audio_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_audio_dialog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_camera_pop_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_camera_pop_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_empty.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_empty.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_image_grid_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_image_grid_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_image_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_image_preview.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_item_camera.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_item_camera.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_preview.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_selector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_title_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_title_bar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_wind_base_dialog_xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_wind_base_dialog_xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/picture_window_folder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/picture_window_folder.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values-en/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values-zh/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values-zh/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/attrs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/long_attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/long_attrs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/xml/file_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/xml/file_paths.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="62c5f98e-7261-40d4-bf68-6e4ffc6f6a31" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -191,7 +31,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RNPickImgCrop.podspec">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../react-native-pick-img-crop2/react-native-pick-img-crop/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1345" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
@@ -306,12 +162,12 @@
       <updated>1566268491603</updated>
       <workItem from="1566268492742" duration="2037000" />
       <workItem from="1566390084460" duration="603000" />
-      <workItem from="1566438274816" duration="24000" />
+      <workItem from="1566438274816" duration="751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2664000" />
+    <option name="totallyTimeSpent" value="3391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1948" y="18" width="1534" height="891" extended-state="0" />
@@ -373,6 +229,18 @@
             <element signature="e#0#77#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNPickImgCrop.podspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../react-native-pick-img-crop2/react-native-pick-img-crop/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1345" />
       </provider>
     </entry>
   </component>

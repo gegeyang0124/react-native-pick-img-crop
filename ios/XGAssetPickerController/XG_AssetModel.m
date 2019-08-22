@@ -45,6 +45,7 @@
         
         NSURL *url = [info valueForKey:@"PHImageFileURLKey"];
         NSString *str = [url absoluteString];   //url>string
+        model.path = [str substringFromIndex:7];//screw all the crap of file://
         NSArray *arr = [str componentsSeparatedByString:@"/"];
         model.imgName = [arr lastObject];  // 图片名字
         model.imgSize = imageData.length;   // 图片大小，单位B
@@ -52,17 +53,17 @@
         
     }];
     
-    [asset requestContentEditingInputWithOptions:nil completionHandler:^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info) {
-        //                    NSLog(@"URL:%@",  contentEditingInput.fullSizeImageURL.absoluteString);
-        model.path = [contentEditingInput.fullSizeImageURL.absoluteString substringFromIndex:7];//screw all the crap of file://
-        //                    NSFileManager *fileManager = [NSFileManager defaultManager];
-        //                    BOOL isExist = [fileManager fileExistsAtPath:path];
-        //                    if (isExist)
-        //                        NSLog(@"oh yeah");
-        //                    else {
-        //                        NSLog(@"damn");
-        //                    }
-    }];
+//    [asset requestContentEditingInputWithOptions:nil completionHandler:^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info) {
+//        //                    NSLog(@"URL:%@",  contentEditingInput.fullSizeImageURL.absoluteString);
+//        model.path = [contentEditingInput.fullSizeImageURL.absoluteString substringFromIndex:7];//screw all the crap of file://
+//        //                    NSFileManager *fileManager = [NSFileManager defaultManager];
+//        //                    BOOL isExist = [fileManager fileExistsAtPath:path];
+//        //                    if (isExist)
+//        //                        NSLog(@"oh yeah");
+//        //                    else {
+//        //                        NSLog(@"damn");
+//        //                    }
+//    }];
 
     return model;
 }
