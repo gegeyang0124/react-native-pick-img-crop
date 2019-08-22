@@ -14,4 +14,9 @@
 
 @interface RNPickImgCrop : NSObject<RCTBridgeModule>
 
+@property (nonatomic, strong) RCTPromiseResolveBlock resolve;//成功回调
+@property (nonatomic, strong) RCTPromiseRejectBlock reject;//异常或错误回调
+@property (nonatomic, strong) NSDictionary *params;//请求参数
+@property (nonatomic, strong) NSMutableArray<XG_AssetModel *> *assets;//选中的图片集合
+
 @end
