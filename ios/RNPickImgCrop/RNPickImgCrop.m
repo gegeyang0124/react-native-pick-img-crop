@@ -122,9 +122,10 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)params
                                 @"mine":model.mine,
                                 @"filename":model.imgName,
                                 @"size":[NSNumber numberWithUnsignedInteger:model.imgSize],
-                                @"width":[NSNumber numberWithUnsignedInteger:model.asset.pixelWidth],
-                                @"height":[NSNumber numberWithUnsignedInteger:model.asset.pixelHeight],
-                                @"creationDate":(model.asset.creationDate) ? [NSString stringWithFormat:@"%.0f", [model.asset.creationDate timeIntervalSince1970]] : [NSNull null]
+                                @"width":[NSNumber numberWithFloat:model.img.size.width],
+                                @"height":[NSNumber numberWithFloat:model.img.size.height],
+//                                @"creationDate":(model.asset.creationDate) ? [NSString stringWithFormat:@"%.0f", [model.asset.creationDate timeIntervalSince1970]] : [NSNull null],
+                                @"creationDate":(model.asset.creationDate) ? [NSNumber numberWithLong: (long)([model.asset.creationDate timeIntervalSince1970])] : [NSNull null]
                                 }];
     }
     self.resolve(selections);
@@ -137,22 +138,31 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)params
 -(void) getCropedPic{
     NSMutableArray *selections = [[NSMutableArray alloc] init];
     
-    int index = 0;
+//    int index = 0;
     for (XG_AssetModel *model in self.assets) {
         RSKImageCropViewController *cropCtrl = [[RSKImageCropViewController alloc] initWithImage:model.img cropMode:RSKImageCropModeSquare];
         
         float cropWidth = [RCTConvert float:self.params[@"cropWidth"]];
         float cropHeight = [RCTConvert float:self.params[@"cropHeight"]];
         
+//        float scale = 3.0f / 4.0f;
+        float scale = cropHeight / cropWidth;
+        cropWidth = model.img.size.width;
+        cropHeight = cropWidth * scale;
+        if(cropHeight > model.img.size.height){
+            cropHeight = model.img.size.height;
+            cropWidth = cropHeight / scale;
+        }
+        
         CGRect cropRect = CGRectMake(0.0, 0.0, cropWidth, cropHeight);
         CGRect imageRect = CGRectMake(0.0, 0.0, cropWidth, cropHeight);
         CGFloat rotationAngle = atan2(0, 0);
         CGFloat zoomScale = 1.0;
         
-        @weakify(index)
+//        @weakify(index)
         [cropCtrl cropImage:cropRect imageRect:imageRect rotationAngle:rotationAngle zoomScale:zoomScale applyMaskToCroppedImage:false didBlock:^(UIImage *croppedImage){
-            @strongify(index)
-            index++;
+//            @strongify(index)
+//            index++;
             
             // we have correct rect, but not correct dimensions
             // so resize image
@@ -162,8 +172,8 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)params
             ImageResult *imageResult = [[ZYCompression new]
                                         compressImage:resizedImage
                                         withOptions:@{
-                                                      @"compressImageMaxWidth":[NSNumber numberWithUnsignedInteger:model.asset.pixelWidth],
-                                                      @"compressImageMaxHeight":[NSNumber numberWithUnsignedInteger:model.asset.pixelHeight],
+                                                      @"compressImageMaxWidth":[NSNumber numberWithFloat:model.img.size.width],
+                                                      @"compressImageMaxHeight":[NSNumber numberWithFloat:model.img.size.height],
                                                       }];
             
             NSString *filePath = [self persistFile:imageResult.data];
@@ -173,11 +183,12 @@ RCT_EXPORT_METHOD(openPicker:(NSDictionary *)params
                                     @"mine":model.mine,
                                     @"filename":model.imgName,
                                     @"size":[NSNumber numberWithUnsignedInteger:model.imgSize],
-                                    @"width":[NSNumber numberWithUnsignedInteger:model.asset.pixelWidth],
-                                    @"height":[NSNumber numberWithUnsignedInteger:model.asset.pixelHeight],
-                                    @"creationDate":(model.asset.creationDate) ? [NSString stringWithFormat:@"%.0f", [model.asset.creationDate timeIntervalSince1970]] : [NSNull null]
+                                    @"width":[NSNumber numberWithFloat:cropWidth],
+                                    @"height":[NSNumber numberWithFloat:cropHeight],
+//                                    @"creationDate":[NSString stringWithFormat:@"%ld", (long)([[NSDate date] timeIntervalSince1970] * 1000)],
+                                    @"creationDate":[NSNumber numberWithLong:(long)([[NSDate date] timeIntervalSince1970] * 1000)]
                                     }];
-            if(index == self.assets.count){
+            if(selections.count == self.assets.count){
                 self.resolve(selections);
             }
             

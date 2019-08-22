@@ -57,20 +57,13 @@ export default class PickImgCrop {
      * return Array;
       [
            {
-                cropRect:
-                    {
-                        height: 750,//裁剪高度
-                        width: 750,//裁剪宽度
-                        x: 0,//裁剪X坐标
-                        y: 188//裁剪Y坐标
-                    },
-                height: 2000,//原图片高
-                mime: "image/jpeg",//图片类型
-                modificationDate: "1564452233000",//裁剪时间
-                creationDate:"1564452233000",//原图片创建时间
                 path: "file:///storage/emulated/0/Pictures/d8c74bd1-a39e-4cf8-bf6d-c05115e4928f.jpg",//图片路径
-                size: 1216097,//图片大小
-                width: 2000//原图片宽
+                mime: "image/jpeg",//图片类型
+                filename: "filename.jpg",//图片名
+                size: 1216097,//片大小
+                width: 2000//图片宽
+                height: 2000,//图片高
+                creationDate:"1564452233000",//图片创建时间
             }
      ];
 

@@ -49,8 +49,10 @@
         NSArray *arr = [str componentsSeparatedByString:@"/"];
         model.imgName = [arr lastObject];  // 图片名字
         model.imgSize = imageData.length;   // 图片大小，单位B
-//        UIImage * image = [UIImage imageWithData:imageData];
         
+//        UIImage * image = [UIImage imageWithData:imageData];
+//        CGSize s = image.size;
+//        NSURL *url2;
     }];
     
 //    [asset requestContentEditingInputWithOptions:nil completionHandler:^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info) {
