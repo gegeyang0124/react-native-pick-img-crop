@@ -95,6 +95,8 @@ export default class PickImgCrop {
                 width: 2000//原图片宽
             }
         ];*/
-        return PickImgCroper.openPicker(options);
+        return PickImgCroper.openPicker(options).then(res=>{
+            return options.multiple ? res : res[0];
+        });
     }
 }

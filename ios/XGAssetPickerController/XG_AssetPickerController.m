@@ -177,6 +177,18 @@
     self.navigationItem.titleView = self.ntView;
 }
 
+- (void)lookImage{
+    [self lookImage:self.currentAlbumIndexpath collectionView:self.collectionView];
+}
+
+- (void)lookImage:(NSIndexPath *)indexPath collectionView:(UICollectionView *)collectionView{
+    NSMutableArray *items = [self.assetArr mutableCopy];
+    //        [items removeObjectAtIndex:0];//加上打开相机时，移除第一个成员
+    [self performSelector:@selector(updateStatusBar) withObject:nil afterDelay:0.2];
+    XG_MediaBrowseView *v = [[XG_MediaBrowseView alloc] initWithItems:items];
+    [v presentCellImageAtIndexPath:indexPath FromCollectionView:collectionView toContainer:self.navigationController.view animated:YES completion:nil];
+}
+
 - (void)configRightBarButtonItem{
 //    XG_BarButtonConfiguration *config = [[XG_BarButtonConfiguration alloc]init];
 //    config.type = XG_BarButtonTypeText;
@@ -305,6 +317,7 @@
         self.bottomConfirmPre = [UIButton buttonWithType:UIButtonTypeCustom];
 //        [self.bottomConfirmPre setTitle:@"预览" forState:UIControlStateNormal];
         [self setUnderlineNoneTitle:self.bottomConfirmPre title:@"预览"];
+        [self.bottomConfirmPre addTarget:self action:@selector(onConfirmBtnPreClick) forControlEvents:UIControlEventTouchUpInside];
         self.bottomConfirmPre.titleLabel.font = [UIFont boldSystemFontOfSize:kBottomConfirmBtnTitleFontSize];
         [self.bottomConfirmPre setFrame:CGRectMake(0, 0, 140, 54)];
         self.bottomConfirmPre.backgroundColor = [UIColor whiteColor];
@@ -370,7 +383,6 @@
     
 }
 
-
 - (void)onConfirmBtnClick {
     [self dismissViewControllerAnimated:YES completion:^{
         if (self.didSelectPhotoBlock) {
@@ -381,6 +393,10 @@
             [self.delegate assetPickerController:self didFinishPickingAssets:[self.pickerOptions.pickedAssetModels copy]];
         }
     }];
+}
+
+- (void)onConfirmBtnPreClick {
+    [self lookImage];
 }
 
 - (void)onTitleBtnClick:(UIButton *)btn{
@@ -484,11 +500,13 @@
             [self showHudWithString:[NSString stringWithFormat:@"最多选择%d张照片",(int)self.pickerOptions.maxAssetsCount]];
         }
     }else{
-        NSMutableArray *items = [self.assetArr mutableCopy];
-//        [items removeObjectAtIndex:0];//加上打开相机时，移除第一个成员
-        [self performSelector:@selector(updateStatusBar) withObject:nil afterDelay:0.2];
-        XG_MediaBrowseView *v = [[XG_MediaBrowseView alloc] initWithItems:items];
-        [v presentCellImageAtIndexPath:indexPath FromCollectionView:collectionView toContainer:self.navigationController.view animated:YES completion:nil];
+        [self lookImage:indexPath collectionView:collectionView];
+        
+//        NSMutableArray *items = [self.assetArr mutableCopy];
+////        [items removeObjectAtIndex:0];//加上打开相机时，移除第一个成员
+//        [self performSelector:@selector(updateStatusBar) withObject:nil afterDelay:0.2];
+//        XG_MediaBrowseView *v = [[XG_MediaBrowseView alloc] initWithItems:items];
+//        [v presentCellImageAtIndexPath:indexPath FromCollectionView:collectionView toContainer:self.navigationController.view animated:YES completion:nil];
     }
 }
 
