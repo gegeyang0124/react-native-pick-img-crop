@@ -80,9 +80,16 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
     }
 
     private void readOption(ReadableMap option) {
-        maxCount = option.hasKey("maxCount") ? option.getInt("maxCount") : 1;
         cropping = option.hasKey("cropping") ? option.getBoolean("cropping") : false;
         multiple = option.hasKey("multiple") ? option.getBoolean("multiple") : false;
+        if (multiple) {
+            maxCount = option.hasKey("maxCount") ? option.getInt("maxCount") : -1;
+            if (maxCount == -1) {
+                maxCount = 99;
+            }
+        } else {
+            maxCount = 1;
+        }
     }
 
     @Override
@@ -101,7 +108,7 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
                 .imageSpanCount(3)// 每行显示个数 int
                 .selectionMode(multiple ? PictureConfig.MULTIPLE : PictureConfig.SINGLE)// 多选 or 单选 PictureConfig.MULTIPLE or PictureConfig.SINGLE
 //                .previewImage(true)// 是否可预览图片 true or false
-                .isCamera(true)// 是否显示拍照按钮 true or false
+                .isCamera(false)// 是否显示拍照按钮 true or false
                 .imageFormat(PictureMimeType.PNG)// 拍照保存图片格式后缀,默认jpeg
                 .isZoomAnim(true)// 图片列表点击 缩放效果 默认true
                 .sizeMultiplier(0.5f)// glide 加载图片大小 0~1之间 如设置 .glideOverride()无效

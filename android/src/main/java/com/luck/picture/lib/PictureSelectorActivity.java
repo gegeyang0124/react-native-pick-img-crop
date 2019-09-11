@@ -863,6 +863,11 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                 if (!anim) {
                     picture_tv_img_num.startAnimation(animation);
                 }
+                if (selectImages.size()==0){
+                    id_ll_ok.setVisibility(View.INVISIBLE);
+                }else {
+                    id_ll_ok.setVisibility(View.VISIBLE);
+                }
                 picture_tv_img_num.setVisibility(View.VISIBLE);
                 picture_tv_img_num.setText("上传（"+String.valueOf(selectImages.size())+")");
 //                picture_tv_ok.setText(getString(R.string.picture_completed));
@@ -877,6 +882,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
 //                picture_tv_ok.setText(getString(R.string.picture_done_front_num, 0,
 //                        config.selectionMode == PictureConfig.SINGLE ? 1 : config.maxSelectNum));
             } else {
+                id_ll_ok.setVisibility(View.INVISIBLE);
                 picture_tv_img_num.setVisibility(View.INVISIBLE);
 //                picture_tv_ok.setText(getString(R.string.picture_please_select));
             }

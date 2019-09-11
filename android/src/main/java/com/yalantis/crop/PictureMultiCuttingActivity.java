@@ -133,7 +133,7 @@ public class PictureMultiCuttingActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ucrop_picture_activity_multi_cutting);
+        setContentView(R.layout.crop_picture_activity_multi_cutting);
         final Intent intent = getIntent();
         list = getIntent().getStringArrayListExtra(UCropMulti.Options.EXTRA_CUT_CROP);
         // Crop cut list
@@ -352,7 +352,7 @@ public class PictureMultiCuttingActivity extends AppCompatActivity {
 
         if (mShowBottomControls) {
             ViewGroup photoBox = (ViewGroup) findViewById(R.id.ucrop_mulit_photobox);
-            View.inflate(this, R.layout.ucrop_controls, photoBox);
+            View.inflate(this, R.layout.crop_controls, photoBox);
 
             mWrapperStateAspectRatio = (ViewGroup) findViewById(R.id.state_aspect_ratio);
             mWrapperStateAspectRatio.setOnClickListener(mStateClickListener);
@@ -492,7 +492,7 @@ public class PictureMultiCuttingActivity extends AppCompatActivity {
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
         lp.weight = 1;
         for (AspectRatio aspectRatio : aspectRatioList) {
-            wrapperAspectRatio = (FrameLayout) getLayoutInflater().inflate(R.layout.ucrop_aspect_ratio, null);
+            wrapperAspectRatio = (FrameLayout) getLayoutInflater().inflate(R.layout.crop_aspect_ratio, null);
             wrapperAspectRatio.setLayoutParams(lp);
             aspectRatioTextView = ((AspectRatioTextView) wrapperAspectRatio.getChildAt(0));
             aspectRatioTextView.setActiveColor(mActiveWidgetColor);
@@ -718,7 +718,7 @@ public class PictureMultiCuttingActivity extends AppCompatActivity {
      * 重置裁剪参数
      */
     protected void resetCutData() {
-        setContentView(R.layout.ucrop_picture_activity_multi_cutting);
+        setContentView(R.layout.crop_picture_activity_multi_cutting);
         Intent intent = new Intent();
         Bundle extras = getIntent().getExtras();
         String path = cutInfos.get(cutIndex).getPath();
