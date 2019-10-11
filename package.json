@@ -1,6 +1,6 @@
 {
   "name": "react-native-pick-img-crop",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "高新能实用的相册图片选择器，可以多张图片选择和裁剪，也可以单张图片选择",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,8 @@
     "选择器",
     "相册",
     "裁剪",
-    "图片"
+    "图片",
+    "camera"
   ],
   "author": {
     "name": "周阳",

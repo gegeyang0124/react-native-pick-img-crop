@@ -65,9 +65,9 @@
 -(void)setAssetArr:(NSMutableArray<XG_AssetModel *> *)assetArr{
     _assetArr = assetArr;
     //插入相机占位
-//    if (![_assetArr containsObject:self.placeholderModel]) {
-//        [_assetArr insertObject:self.placeholderModel atIndex:0];
-//    }
+    if (![_assetArr containsObject:self.placeholderModel]) {
+        [_assetArr insertObject:self.placeholderModel atIndex:0];
+    }
 }
 
 -(void)dealloc{
@@ -183,7 +183,7 @@
 
 - (void)lookImage:(NSIndexPath *)indexPath collectionView:(UICollectionView *)collectionView{
     NSMutableArray *items = [self.assetArr mutableCopy];
-    //        [items removeObjectAtIndex:0];//加上打开相机时，移除第一个成员
+//    [items removeObjectAtIndex:0];//加上打开相机时，移除第一个成员
     [self performSelector:@selector(updateStatusBar) withObject:nil afterDelay:0.2];
     XG_MediaBrowseView *v = [[XG_MediaBrowseView alloc] initWithItems:items];
     [v presentCellImageAtIndexPath:indexPath FromCollectionView:collectionView toContainer:self.navigationController.view animated:YES completion:nil];
@@ -467,7 +467,7 @@
             if (self.pickerOptions.maxAssetsCount < 0 || self.pickerOptions.pickedAssetModels.count < self.pickerOptions.maxAssetsCount) {
                 weakCell.selectPhotoButton.selected = YES;
                 model.picked = YES;
-                model.img = weakCell.imageView.image;
+//                model.img = weakCell.imageView.image;
                 [self.pickerOptions.pickedAssetModels addObject:model];
                 weakCell.numberLabel.text = [NSString stringWithFormat:@"%d",(int)self.pickerOptions.pickedAssetModels.count];
             } else {
@@ -487,8 +487,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    if (indexPath.item == 0) {
-    if (indexPath.item == -1) {
+    if (indexPath.item == 0) {
+//    if (indexPath.item == -1) {
         //打开相机
         if (self.pickerOptions.pickedAssetModels.count < self.pickerOptions.maxAssetsCount) {
 #if TARGET_OS_SIMULATOR
@@ -667,16 +667,18 @@
                     NSMutableArray *indexPaths = @[].mutableCopy;
                     if (insertItems && insertItems.count > 0) {
                         for (int i=0; i<insertItems.count; i++) {
-                            XG_AssetModel *model = [[XG_AssetModel alloc] init];
-                            model.asset = insertItems[i];
-                            if (self.pickerOptions.pickedAssetModels.count < self.pickerOptions.maxAssetsCount) {
+                            XG_AssetModel *model = [XG_AssetModel modelWithAsset:insertItems[i] videoPickable:self.pickerOptions.videoPickable];
+//                            XG_AssetModel *model = [[XG_AssetModel alloc] init];
+//                            model.asset = insertItems[i];
+                            if (self.pickerOptions.maxAssetsCount < 0 || self.pickerOptions.pickedAssetModels.count < self.pickerOptions.maxAssetsCount) {
                                 model.picked = YES;
                                 model.number = (int)self.pickerOptions.pickedAssetModels.count + 1;
                                 [self.pickerOptions.pickedAssetModels addObject:model];
                             }else{
-                                model.picked = NO;
-                                model.number = 0;
+//                                model.picked = NO;
+//                                model.number = 0;
                             }
+                            
                             [currentAlbum.assetArray insertObject:model atIndex:1];
                             [indexPaths addObject:[NSIndexPath indexPathForItem:i+1 inSection:0]];
                         }

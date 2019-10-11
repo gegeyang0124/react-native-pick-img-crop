@@ -71,6 +71,7 @@
         
         [[XG_AssetPickerManager manager] getPhotoWithAsset:model.asset photoWidth:self.frame.size.width completion:^(UIImage *photo, NSDictionary *info) {
             self.imageView.image = photo;
+            model.img = photo;
         }];
         self.selectPhotoButton.selected = model.picked;
         self.selectImageView.image = model.picked ? ImageWithFile(@"picker_selected") : ImageWithFile(@"picker_unselected");

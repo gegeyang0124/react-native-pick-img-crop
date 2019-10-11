@@ -28,6 +28,9 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
     private final int RESULT_OK = -1;
     private boolean cropping = false;
     private boolean multiple = false;
+    private boolean isCamera = true;
+    private int cropWidth=200;
+    private int cropHeight=200;
     private int maxCount = 1;
     private final ActivityEventListener mActivityEventListener = new BaseActivityEventListener() {
         @Override
@@ -82,6 +85,9 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
     private void readOption(ReadableMap option) {
         cropping = option.hasKey("cropping") ? option.getBoolean("cropping") : false;
         multiple = option.hasKey("multiple") ? option.getBoolean("multiple") : false;
+         isCamera = option.hasKey("isCamera") ? option.getBoolean("isCamera") : true;
+        cropWidth= option.hasKey("cropWidth") ? option.getInt("cropWidth") : 200;
+        cropHeight=option.hasKey("cropHeight") ? option.getInt("cropHeight") : 200;
         if (multiple) {
             maxCount = option.hasKey("maxCount") ? option.getInt("maxCount") : -1;
             if (maxCount == -1) {
@@ -108,7 +114,7 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
                 .imageSpanCount(3)// 每行显示个数 int
                 .selectionMode(multiple ? PictureConfig.MULTIPLE : PictureConfig.SINGLE)// 多选 or 单选 PictureConfig.MULTIPLE or PictureConfig.SINGLE
 //                .previewImage(true)// 是否可预览图片 true or false
-                .isCamera(true)// 是否显示拍照按钮 true or false
+                .isCamera(isCamera)// 是否显示拍照按钮 true or false
                 .imageFormat(PictureMimeType.PNG)// 拍照保存图片格式后缀,默认jpeg
                 .isZoomAnim(true)// 图片列表点击 缩放效果 默认true
                 .sizeMultiplier(0.5f)// glide 加载图片大小 0~1之间 如设置 .glideOverride()无效
@@ -116,7 +122,7 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
                 .enableCrop(cropping)// 是否裁剪 true or false
                 .compress(true)// 是否压缩 true or false
 //                .glideOverride()// int glide 加载宽高，越小图片列表越流畅，但会影响列表图片浏览的清晰度
-                .withAspectRatio(1, 1)// int 裁剪比例 如16:9 3:2 3:4 1:1 可自定义
+                .withAspectRatio(cropWidth, cropHeight)// int 裁剪比例 如16:9 3:2 3:4 1:1 可自定义
                 .hideBottomControls(true)// 是否显示uCrop工具栏，默认不显示 true or false
                 .isGif(false)// 是否显示gif图片 true or false
 //                .compressSavePath(getPath())//压缩图片保存地址
