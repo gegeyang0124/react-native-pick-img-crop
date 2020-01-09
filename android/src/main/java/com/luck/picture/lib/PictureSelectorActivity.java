@@ -10,11 +10,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.support.annotation.RequiresApi;
-import android.support.v4.content.FileProvider;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SimpleItemAnimator;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.FileProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -52,6 +52,7 @@ import com.luck.picture.lib.tools.StringUtils;
 import com.luck.picture.lib.tools.ToastManage;
 import com.luck.picture.lib.widget.FolderPopWindow;
 import com.luck.picture.lib.widget.PhotoPopupWindow;
+import com.utils.StatusBarUtils;
 import com.yalantis.crop.UCrop;
 import com.yalantis.crop.UCropMulti;
 import com.yalantis.crop.model.CutInfo;
@@ -185,10 +186,19 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
             setContentView(R.layout.picture_empty);
         } else {
             setContentView(R.layout.picture_selector);
+            StatusBarUtils.with(this)
+                    .setIsStatusFontWhite(true)
+                    .clearActionBarShadow()
+                    .setDrawable(getResources().getDrawable(R.drawable.gallery_title_bg))
+                    .init();
             initView(savedInstanceState);
         }
     }
 
+    @Override
+    public boolean isImmersive() {
+        return false;
+    }
 
     /**
      * init views
@@ -545,8 +555,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
      */
     private void audioDialog(final String path) {
         audioDialog = new CustomDialog(mContext,
-                LinearLayout.LayoutParams.MATCH_PARENT, audioH
-                ,
+                LinearLayout.LayoutParams.MATCH_PARENT, audioH,
                 R.layout.picture_audio_dialog, R.style.Theme_dialog);
         audioDialog.getWindow().setWindowAnimations(R.style.Dialog_Audio_StyleAnim);
         tv_musicStatus = audioDialog.findViewById(R.id.tv_musicStatus);
@@ -869,7 +878,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                     id_ll_ok.setVisibility(View.VISIBLE);
                 }
                 picture_tv_img_num.setVisibility(View.VISIBLE);
-                picture_tv_img_num.setText("上传（"+String.valueOf(selectImages.size())+")");
+                picture_tv_img_num.setText( getResources().getString(R.string.picture_up) + "（"+String.valueOf(selectImages.size())+")");
 //                picture_tv_ok.setText(getString(R.string.picture_completed));
                 anim = false;
             }

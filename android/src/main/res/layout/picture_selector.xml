@@ -14,14 +14,16 @@
         android:layout_height="wrap_content" />
 
 
+
+<!--    android:background="?attr/picture.bottom.bg"-->
     <RelativeLayout
         android:id="@+id/rl_bottom"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
-        android:background="?attr/picture.bottom.bg"
+        android:background="@drawable/gallery_title_bg"
         android:gravity="center_vertical">
-
+<!--        android:textColor="?attr/picture.preview.textColor"-->
         <TextView
             android:id="@+id/picture_id_preview"
             android:layout_width="wrap_content"
@@ -31,9 +33,10 @@
             android:gravity="left|center"
             android:padding="12dp"
             android:text="@string/picture_preview"
-            android:textColor="?attr/picture.preview.textColor"
+            android:textColor="@color/white"
             android:textSize="14sp" />
 
+<!--        android:background="@android:color/holo_orange_dark"-->
         <LinearLayout
             android:id="@+id/id_ll_ok"
             android:layout_width="100dp"
@@ -42,7 +45,7 @@
             android:layout_centerVertical="true"
             android:enabled="false"
             android:visibility="invisible"
-            android:background="@android:color/holo_orange_dark"
+
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -71,7 +74,7 @@
     </RelativeLayout>
 
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/picture_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

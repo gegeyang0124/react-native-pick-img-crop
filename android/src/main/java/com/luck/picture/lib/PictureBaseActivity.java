@@ -10,8 +10,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentActivity;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import android.text.TextUtils;
 
 import com.luck.picture.lib.compress.Luban;
@@ -45,6 +45,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * @author：luck
+ * @author：yz
  * @data：2018/3/28 下午1:00
  * @描述: Activity基类
  */

@@ -2,6 +2,7 @@ package com.luck.picture.lib;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Base64;
 import android.util.Log;
 
 import com.facebook.react.bridge.ActivityEventListener;
@@ -19,6 +20,13 @@ import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.entity.LocalMedia;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PhotoCropPicker extends ReactContextBaseJavaModule {
@@ -32,6 +40,8 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
     private int cropWidth=200;
     private int cropHeight=200;
     private int maxCount = 1;
+    private boolean includeBase64 = false;//是否包含Base64编码
+
     private final ActivityEventListener mActivityEventListener = new BaseActivityEventListener() {
         @Override
         public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
@@ -39,39 +49,36 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
             if (resultCode == RESULT_OK && requestCode == PictureConfig.CHOOSE_REQUEST) {
 //                // 图片、视频、音频选择结果回调
                 List<LocalMedia> selectList = PictureSelector.obtainMultipleResult(data);
+                if(!multiple && selectList.size() > 1){
+                    List<LocalMedia> lst = new ArrayList<>();
+                    lst.add(selectList.get(0));
+                }
+
 //                // 例如 LocalMedia 里面返回三种path
 //                // 1.media.getPath(); 为原图path
 //                // 2.media.getCutPath();为裁剪后path，需判断media.isCut();是否为true  注意：音视频除外
 //                // 3.media.getCompressPath();为压缩后path，需判断media.isCompressed();是否为true  注意：音视频除外
 //                // 如果裁剪并压缩了，以取压缩路径为准，因为是先裁剪后压缩的
-                if (!multiple) {
-                    WritableArray writableArray = new WritableNativeArray();
-                    WritableMap image = new WritableNativeMap();
-                    if (selectList.get(0).isCut()) {
-                        image.putString("path", "file://" + selectList.get(0).getCutPath());
-                    } else if (selectList.get(0).isCompressed()) {
-                        image.putString("path", "file://" + selectList.get(0).getCompressPath());
+                WritableArray writableArray = new WritableNativeArray();
+                WritableMap image;
+                for (LocalMedia localMedia : selectList) {
+                    image = new WritableNativeMap();
+                    String path;
+                    if (localMedia.isCut()) {
+                        path = localMedia.getCutPath();
+                    } else if (localMedia.isCompressed()) {
+                        path = localMedia.getCompressPath();
                     } else {
-                        image.putString("path", "file://" + selectList.get(0).getPath());
+                        path = localMedia.getPath();
+                    }
+
+                    image.putString("path", "file://" + path);
+                    if(includeBase64){
+                        image.putString("data", getBase64StringFromFile(path));
                     }
                     writableArray.pushMap(image);
-                    mPromise.resolve(writableArray);
-                } else {
-                    WritableArray writableArray = new WritableNativeArray();
-                    WritableMap image;
-                    for (LocalMedia localMedia : selectList) {
-                        image = new WritableNativeMap();
-                        if (localMedia.isCut()) {
-                            image.putString("path", "file://" + localMedia.getCutPath());
-                        } else if (localMedia.isCompressed()) {
-                            image.putString("path", "file://" + localMedia.getCompressPath());
-                        } else {
-                            image.putString("path", "file://" + localMedia.getPath());
-                        }
-                        writableArray.pushMap(image);
-                    }
-                    mPromise.resolve(writableArray);
                 }
+                mPromise.resolve(writableArray);
             }
         }
     };
@@ -85,7 +92,8 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
     private void readOption(ReadableMap option) {
         cropping = option.hasKey("cropping") ? option.getBoolean("cropping") : false;
         multiple = option.hasKey("multiple") ? option.getBoolean("multiple") : false;
-         isCamera = option.hasKey("isCamera") ? option.getBoolean("isCamera") : true;
+        isCamera = option.hasKey("isCamera") ? option.getBoolean("isCamera") : true;
+        includeBase64 = option.hasKey("includeBase64") ? option.getBoolean("includeBase64") : false;
         cropWidth= option.hasKey("cropWidth") ? option.getInt("cropWidth") : 200;
         cropHeight=option.hasKey("cropHeight") ? option.getInt("cropHeight") : 200;
         if (multiple) {
@@ -140,5 +148,36 @@ public class PhotoCropPicker extends ReactContextBaseJavaModule {
                 .scaleEnabled(false)// 裁剪是否可放大缩小图片 true or false
                 .isDragFrame(true)// 是否可拖动裁剪框(固定)
                 .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
+    }
+
+
+    /***
+     * 读取图片的Base64编码
+     * ***/
+    private String getBase64StringFromFile(String absoluteFilePath) {
+        InputStream inputStream;
+
+        try {
+            inputStream = new FileInputStream(new File(absoluteFilePath));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        byte[] bytes;
+        byte[] buffer = new byte[8192];
+        int bytesRead;
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+
+        try {
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                output.write(buffer, 0, bytesRead);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        bytes = output.toByteArray();
+        return Base64.encodeToString(bytes, Base64.NO_WRAP);
     }
 }

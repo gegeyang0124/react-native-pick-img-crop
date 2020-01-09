@@ -64,12 +64,16 @@ export default class PickImgCrop {
                 width: 2000//图片宽
                 height: 2000,//图片高
                 creationDate:"1564452233000",//图片创建时间
+                isCamera:true,//是否显示拍照按钮
+                includeBase64:false,//是否包含Base64编码
             }
      ];
 
      * **/
     static openPicker(options={}){
         options = Object.assign({},{
+            includeBase64:false,//是否包含Base64编码
+            isCamera:true,//是否显示拍照按钮 默认true，显示
             cropping:false,//bool 可不传,//是否剪辑图片 默认是false;flase时打开大图，true时进入裁剪控件
             multiple:true,//bool 可不传,//是否图片多选 默认是false；多选时显示先后选中顺序，取消其中任意一个选中按顺序缩减，单选只显示1，选中另一个则取消上一个选中
             maxCount:-1,//number 可不传,//最大可选数量，multiple为true此字段有效；不传或为-1时，选择数量不受限制
